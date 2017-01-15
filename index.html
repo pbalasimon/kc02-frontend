@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Curriculum Pedro Bala Simón :: Fullstack Web developer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <script type="text/javascript" src=js/cv.js></script>
+    <script type="text/javascript" src="js/wishes.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header-image" src="images/logo.png" alt="logo">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item active"><a class="navbar-link" href="#cover">Portada</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#how">Quien soy</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#experience">Experiencia</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#studies">Estudios</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#about">Sobre mi</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#wishes">Lista de deseos</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cover">
+            <img class="cover-image" src="images/cover.jpg" alt="cover-image">
+            <p class="title-cite">¡Bienvenido a mi web!</p>
+            <p class="subtitle-cite">Soy Pedro Bala, un Fullstack Web Developer<span>|</span></p>
+        </section>
+        <section id="how">
+            <article>
+                <header>
+                    <h3>Quien soy</h3>
+                </header>
+                <img class="me-img" src="images/yo.jpg" alt="yo">
+                <p>Me llamo Pedro Bala Simón. Nací en Zaragoza en 1984. Mi pasión por los ordenadores comenzó de pequeño, cuando unas Navidades me regalaron un Amstrad CPC 6128. Recuerdo ese momento como si fuera ayer, desde entonces no me he separado de un ordenador. Después de muchos años formándome y trabajando duro, me he convertido en un Full Stack Web Developer. Soy amante del clean code, responsable y con una alta capacidad de trabajo en equipo. </p>
+            </article>
+        </section>
+        <section id="experience">
+            <article>
+                <header>
+                    <h3>Experiencia</h3>
+                </header>
+                <ul>
+                    <li><strong>abr. 2013 -- actualidad: &nbsp;</strong>Analista Programador. Desarrollando varios proyectos con tecnologías Java para clientes como Sabadell, Campofrio, RACC, Seur, Oney y Pikolin. HPE Consultoría y Aplicaciones.</li>
+                    <li><strong>dic. 2011 -- mar. 2013: &nbsp;</strong>Programador. Desarrollando una aplicación para la modernización de la Administración Electrónica del Gobierno de Aragón. U.T.E. Telefónica - iASoft - TB·Solutions. </li>
+                    <li><strong>may. 2010 -- oct. 2011: &nbsp;</strong>Programador. Desarrollando varias aplicaciones Web con tecnología Java. Iritec. </li>
+                    <li><strong>sep. 2008 -- jun 2009: &nbsp;</strong>Programador. Desarrollando varias aplicaciones: Web del Conservatorio Superior de Música de Aragón y Aplicación para la gestión del parking de la Universidad de Zaragoza. Infozara Consultoría Informática.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="studies">
+            <article>
+                <header>
+                    <h3>Estudios</h3>
+                </header>
+                <ul>
+                    <li><strong>2016 -- actualidad:&nbsp;</strong> Cursando la segunda edición del <a target="blank" href="https://keepcoding.io/es/keepcoding-web-development-master-bootcamp/">Web Development Master Bootcamp.</a> </li>
+                    <li><strong>2002 -- 2008:&nbsp;</strong> Ingeniero Técnico Informático de Sistemas. Escuela Universitaria Politécnica la Almunia.</li>
+                    <li><strong>2007 -- 2008:&nbsp;</strong> Máster en Bases de Datos e Internet. Facultad de Matemáticas. Universidad de Zaragoza.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="about">
+            <article>
+                <header>
+                    <h3>Sobre mi</h3>
+                </header>
+                <p>Mis principales aficiones son viajar y estar con mis amigos. Durante los últimos años de mi vida, he viajada por diferentes países del mundo para conocer sus culturas. También pertenezco a la Cofradía de la <a target="_blank" href="http://www.exaltacion.es">Exaltación</a> en la que, durante el periodo de Semana Santa, toco el tambor. ¡También me gusta mucho escuchar música! </p>
+                <video width="320" controls>
+                    <source src="video/video.mp4" type="video/mp4">
+                </video>
+            </article>
+        </section>
+        <section id="wishes">
+            <div class="wishes-row">
+                <h3>Lista de deseos</h3>
+            </div>
+            <div class="wishes-row">
+                <div class="wishes-col">
+                    <h6>Añade a tu lista de deseos, el producto de Amazon que mas te guste :)</h6>
+                    <ul id="wishList"></ul>
+                    <form id="wishes-form" action="#" method="get">
+                        <div class="wishes-form-row">
+                            <label for="productName">Nombre del producto *</label>
+                            <input type="text" id="productName" placeholder="libro" maxlength="15" required oninvalid="setCustomValidity('La clave del producto es obligatoria')" oninput="setCustomValidity('')">
+                        </div>
+                        <div class="wishes-form-row">
+                            <label for="productUrl">URL del producto *</label>
+                            <input type="url" id="productUrl" placeholder="https://www.amazon.es" required oninvalid="setCustomValidity('La url introducida no es correcta')" oninput="setCustomValidity('')" pattern="^(ftp|http|https):\/\/(([a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]+)|((25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9]?)(\.(25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9]?)){3}(:?[0-9]*)))?(\/.*)?$">
+                        </div>
+                        <div class="wishes-form-row">
+                            <input type="submit" value="Añadir" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact-row">
+                <h3>Contacta conmigo</h3>
+            </div>
+            <div class="contact-row">
+                <div class="contact-col">
+                    <form id="contact-form" action="#" method="get">
+                        <div class="contact-form-row">
+                            <label for="name">Nombre y apellidos *</label>
+                            <input type="text" id="name" placeholder="Alfredo Pérez" maxlength="40" required oninvalid="setCustomValidity('El nombre es obligatorio')" oninput="setCustomValidity('')">
+                        </div>
+                        <div class="contact-form-row">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" placeholder="ejemplo@company.com" maxlength="40" required oninvalid="setCustomValidity('El email introducido es inválido')" oninput="setCustomValidity('')">
+                        </div>
+                        <div class="contact-form-row">
+                            <label for="how-met">¿Como me has conocido?</label>
+                            <select id="how-met" oninvalid="setCustomValidity('Por favor, seleccione una opción')" oninput="setCustomValidity('')">
+                                <option value="">-- Seleccione una opción --</option>
+                                <option value="kc">II Web Development Master Bootcamp</option>
+                                <option value="gh">GitHub</option>
+                                <option value="fb">Facebook</option>
+                                <option value="tw">Twitter</option>
+                                <option value="lk">LinkedIn</option>
+                                <option value="ot">Otros</option>
+                            </select>
+                        </div>
+                        <div id="other" class="contact-form-row hide">
+                            <label for="others">Otros</label>
+                            <input type="text" id="others" maxlength="40" placeholder="Otros">
+                        </div>
+                        <div class="contact-form-row">
+                            <label for="phone">Número de contacto</label>
+                            <input type="text" id="phone" maxlength="15" placeholder="+34 900 000 000" pattern="^(?:\+?\d{2}[ -]?\d{3}[ -]?\d{3}[ -]?\d{3})$" oninvalid="setCustomValidity('El teléfono introducido es inválido')" oninput="setCustomValidity('')" required>
+                        </div>
+                        <div class="contact-form-row">
+                            <label for="observations">Observaciones</label>
+                            <textarea id="observations"></textarea>
+                        </div>
+                        <div class="contact-form-row">
+                            <input type="submit" value="Enviar" />
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-col">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11923.66703277355!2d-0.8867589730468749!3d41.65754050000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914ed3a365d99%3A0x2c9794f306513481!2sBas%C3%ADlica+de+Nuestra+Se%C3%B1ora+del+Pilar!5e0!3m2!1ses!2ses!4v1484219379006" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>Pedro Bala Simón &copy; Estudiante II Web Development Master Bootcamp</footer>
+</body>
+
+</html>

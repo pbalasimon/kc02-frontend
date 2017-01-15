@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-image {
+    height: 70px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.navbar {
+    display: flex;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.navbar > .navbar-list {
+    list-style-type: none;
+    font-size: 0;
+}
+
+.navbar > .navbar-list > .navbar-item {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link {
+    text-decoration: none;
+    color: black;
+    padding: 27px 10px 26px 10px
+}
+
+.navbar > .navbar-list > .navbar-item.active > .navbar-link {
+    background-color: #A4A4A4;
+    color: black;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link:hover {
+    background-color: #A4A4A4;
+    color: black;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link:active {
+    background-color: #A4A4A4;
+    color: black;
+}
+
+#cover > .cover-image {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: -5px;
+}
+
+#cover > .title-cite {
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    top: 150px;
+    left: 2%;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    animation: keyboard1 5s steps(60, end);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50%;
+}
+
+#cover > .subtitle-cite {
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    top: 210px;
+    left: 2%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    animation: keyboard2 5.5s steps(60, end);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50%;
+}
+
+#cover > .subtitle-cite > span {
+    animation: blink 1s infinite;
+}
+
+@keyframes keyboard1 {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes keyboard2 {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        opacity: .0;
+    }
+}
+
+#how {
+    padding: 10px;
+    background-color: #F2F2F2;
+    overflow: auto;
+}
+
+#how > article > .me-img {
+    float: left;
+    height: 150px;
+    margin: 10px;
+}
+
+#experience {
+    padding: 10px;
+    background-color: white;
+}
+
+#studies {
+    padding: 10px;
+    background-color: #F2F2F2;
+}
+
+#about {
+    padding: 10px;
+    background-color: white;
+}
+
+#wishes {
+    padding: 10px;
+    background-color: #F2F2F2;
+}
+
+#wishList {
+    list-style: circle;
+}
+
+#wishList > li {
+    text-decoration: none;
+}
+
+#wishList > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+#wishList > li > a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#contact,
+#wishes {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact > .contact-row,
+#wishes > .wishes-row {
+    display: flex;
+}
+
+#contact > .contact-row > .contact-col > #contact-form > .contact-form-row,
+#wishes > .wishes-row > .wishes-col > #wishes-form > .wishes-form-row {
+    display: flex;
+    margin: 10px;
+}
+
+#contact-form {
+    margin-right: 100px;
+}
+
+#contact-form > div > label,
+#wishes-form > div > label {
+    width: 220px;
+    font-weight: 600;
+}
+
+#contact-form > .contact-form-row > input[type="text"],
+#wishes-form > .wishes-form-row > input[type="text"],
+input[type="email"],
+input[type="url"],
+select,
+textarea {
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#contact-form > .contact-form-row > input[type="submit"],
+#wishes-form > .wishes-form-row > input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+#contact > .contact-row > .contact-col > #contact-form > .contact-form-row.hide {
+    display: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+footer {
+    width: 100%;
+    color: #acb3ba;
+    background-color: #2b2e31;
+    padding: 25px;
+    text-align: center;
+}
